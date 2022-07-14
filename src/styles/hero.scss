@@ -1,0 +1,117 @@
+.heroContainer{
+    margin-top: 90px;
+    width: 100vw;
+    height: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .titleHTML{
+        position: relative;
+        z-index: 5;
+        font-size: 50px;
+        line-height: 55px;
+        text-transform: uppercase;
+        font-weight: 700;
+        max-width: 700px;
+        color: white;
+        text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.15), 1px -1px 0 rgba(0, 0, 0, 0.15), -1px 1px 0 rgba(0, 0, 0, 0.15), 1px 1px 0 rgba(0, 0, 0, 0.15);
+        
+        span{
+            color: $yellow;
+        }
+    }
+    
+    .heroSubhead{
+        position: relative;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+      
+        h5.white{
+            color: white;
+            font-size: 1.4rem;
+            text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.15), 1px -1px 0 rgba(0, 0, 0, 0.15), -1px 1px 0 rgba(0, 0, 0, 0.15), 1px 1px 0 rgba(0, 0, 0, 0.15);
+            
+        }
+        
+        .yellowBlock{
+            font-size: 1rem;
+            color: $black;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            background-color: $yellow_bright;
+            margin-right: 1rem;
+        }
+    }
+
+    .dealsBtn{
+        position: relative;
+        z-index: 5;
+        color: white;
+        padding: 0.6rem 2rem;
+        border: 1px solid white;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        z-index: 1;
+    }
+
+    @media screen and ( max-width: 1200px ){
+        height: 400px;
+
+        .titleHTML{
+            font-size: 40px;
+            max-width: 70vw;
+        }
+
+        .heroSubhead{
+            h5.white{
+                font-size: 20px;
+            }
+            .yellowBlock{
+                font-size: 12px;
+            }
+        }
+    }
+
+    @media screen and ( max-width: 600px ){
+        margin-top: 20px;
+        height: 300px;
+
+
+        .titleHTML{
+            font-size: 20px;
+            line-height: 25px;
+        }
+
+        .heroSubhead{
+            flex-direction: column;
+            h5.white{
+                font-size: 20px;
+                margin: 0;
+            }
+            .yellowBlock{
+                font-size: 0.7rem;
+                margin: 0.5rem 0;
+            }
+        }
+
+        .dealsBtn{
+            font-size: 0.8rem;
+            padding: 0.5rem 1rem;
+            margin-top: 10px;
+        }
+
+    }
+}
