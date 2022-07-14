@@ -1,0 +1,32 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import "./variables.scss";
+@import "./slick_overrides.scss";
+@import "./carousel.scss";
+@import "./hero.scss";
+@import "./navbar.scss";
+@import "./card.scss";
+@import "./footer.scss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Red+Hat+Text:wght@300;400;500;700&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+.App {
+  text-align: center;
+  font-family: 'Red Hat Text', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  @media screen and (max-width: 600px){
+    padding-top: 40px;
+  }
+
+}
+

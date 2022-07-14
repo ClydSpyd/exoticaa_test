@@ -1,0 +1,56 @@
+.footerContainer{
+    width: 100vw;
+    height: 250px;
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    box-sizing: border-box;
+    padding: 40px;
+    
+    .logoContainer{
+        height: 60px;
+        position: relative;
+        width: 250px;
+        margin-bottom: 1.5rem;
+
+        .footerLogo{
+            height: 40px;
+            padding: 10px;
+            transform-style: preserve-3d;
+    
+        }
+
+        &:after{
+            content: '';
+            height: 1px;
+            top: 30px;
+            left: 100%;
+            opacity: .6;
+            width: 50vw;
+            background-color: $yellow;
+            position: absolute;
+            transform: translateZ(-1);
+        }
+        
+        &:before{
+            content: '';
+            height: 1px;
+            top: 30px;
+            right: 100%;
+            opacity: .6;
+            width: 50vw;
+            background-color: $yellow;
+            position: absolute;
+            transform: translateZ(-1);
+        }
+
+    }
+
+    p{
+        font-size: .6rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin: 5px;
+    }
+}

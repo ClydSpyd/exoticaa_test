@@ -1,0 +1,103 @@
+
+.carousel{
+    height: 600px;
+    width: 100vw;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: center;
+    margin:0 0 20px 0;
+    background: url('../assets/bg_beach_escapes.jpeg') no-repeat;
+    background-size: cover;
+  
+    .titleBar{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+      padding: 0 40px;
+
+      .responsiveTrips{
+        display: none;
+
+        @media screen and (max-width: 600px){
+            display: inline-block;
+            width: 100vw;
+            margin: 0;
+            text-align: center;
+        }
+      }
+  
+      h1.laneTitle{
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-size: 50px;
+        margin: 0.7rem 0 0.5rem 0;
+        font-weight: 300;
+      }
+      p.laneDescription{
+        margin: 0 0 0.7rem ;
+  
+        @media screen and (max-width: 1200px){
+          max-width: 600px;
+        }
+      }
+  
+      .moreTrips{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+  
+        .tripsAvailable{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+  
+          .line{
+            height: 1px;
+            background-color: black;
+            width:2.5rem;
+          }
+          p{
+            font-size: .8rem;
+            margin: .5rem;
+          }
+  
+        }
+  
+        .seeMoreBtn{
+          padding: .7rem 3rem;
+          border: 1px solid rgb(42, 42, 42);
+          color: rgb(42, 42, 42);
+          border-radius: .3rem;
+          cursor: pointer;
+          background-color: white;
+          white-space: nowrap;
+        }
+  
+      }
+  
+      
+    }
+    
+        @media screen and (max-width: 600px) {
+          height: 500px;
+
+          .titleBar{
+            padding: 0;
+      
+            h1.laneTitle{
+              text-align: center;
+              width: 100vw;
+              font-size: 40px;
+            }
+      
+            .seeMoreBtn,
+            p.laneDescription{
+              display: none;
+      
+            }
+          }
+        }
+  }

@@ -1,0 +1,153 @@
+
+.navContainer{
+    position: fixed;
+    top: 0;
+    z-index: 150;
+    background-color: $black;
+
+    .promotionBar{
+        width: 100vw;
+        height: 30px;
+        background-color: $yellow_bright;
+        transition: .3s all ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        opacity: 1;
+
+        .blueBlock{
+            background-color: blue;
+            padding: 4px 0.9rem;
+            border-radius: 0.4rem;
+            font-size: 0.6rem;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-right: 0.7rem;
+        }
+        
+        h5{
+            font-size: 0.9rem;
+            margin-right: 0.7rem;
+        }
+        
+        p.moreInfo{
+            font-size: 0.8rem;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+
+    &.collapsed{
+        .promotionBar{
+            height: 0;
+            opacity: 0;
+        }
+    }
+
+    .navBar{
+        width: 100vw;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 0 30px;
+    
+        .navLeft{
+            display: flex;
+            align-items: center;
+    
+            .hamburger{
+                display: none;
+                transform: scale(0.85);
+                margin-right: 20px;
+                position: relative;
+                top: 3px;
+                cursor: pointer
+                ;
+                img{
+                    height: 20px;
+                    width: 35px;
+                }
+                h6{
+                    margin: 0;
+                    font-size: 0.7rem;
+                    color: white;
+                    font-weight: 500;
+                }
+            }
+    
+            .logo{
+                height: 35px;
+                margin-right: 30px;
+                position: relative;
+                bottom: 3px;
+            }
+    
+            .mainNav{
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            
+                .navItem{
+                    height: 60px;
+                    width: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: .3s all ease;
+            
+                    p{
+                        color: white;
+                        font-size: 0.9rem;
+                    }
+            
+                        .chevron{
+                            height: 10px;
+                            width: 10px;
+                            background-image: url('../assets/chevron_white.png');
+                            background-size: 10px;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            position: relative;
+                            left: 5px;
+                            top: 1px;
+                        }
+            
+                    &:hover{
+                        background-color: rgba(255, 255, 255, 0.05);
+                    }
+                }
+    
+            }
+        }
+    
+        .marketSelector{
+            position: absolute;
+            right: 20px;
+            button{
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+        }
+    
+    
+        @media screen and (max-width: 1100px){
+            .navLeft{
+                .mainNav{
+                    display: none;
+                }
+                .hamburger{
+                    display: inline-block;
+                }
+    
+            }
+        }
+    
+    
+    }
+}
